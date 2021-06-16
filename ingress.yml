@@ -13,4 +13,5 @@ spec:
        backend: 
         service: 
           name: dispatcher-jira
-          port: 80
+          port: 
+            number: 80
