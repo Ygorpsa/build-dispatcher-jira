@@ -9,8 +9,8 @@ spec:
   rules:
   - http: 
      paths: 
-     - path: /healthy
-       pathType: Exact
+     - path: /
+       pathType: Prefix
        backend: 
         service: 
           name: dispatcher-jira
