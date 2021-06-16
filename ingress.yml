@@ -10,6 +10,7 @@ spec:
   - http: 
      paths: 
      - path: /healthy
+       pathType: Exact
        backend: 
         service: 
           name: dispatcher-jira
