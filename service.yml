@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dispatcher-jira
+  labels:
+    app: dispatcher-jira
+    service: dispatcher-jira
+  annotations:
+    cloud.google.com/backend-config: '{"default": "dispatcher-jira-backendconfig"}'
+spec:
+  selector:
+    app: dispatcher-jira
+  ports:
+    - name: http
+      port: 80
+      targetPort: APP_PORT
+      protocol: TCP
+  type: NodePort
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dispatcher-jira
+  labels:
+    account: dispatcher-jira

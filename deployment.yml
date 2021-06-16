@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dispatcher-jira
+  labels:
+    app: dispatcher-jira
+    version: v1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: dispatcher-jira
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: dispatcher-jira
+        version: v1
+    spec:
+      containers:
+      - name: dispatcher-jira
+        image: gcr.io/monitoria-groovetech/dispatcher-jira:TAG_IMAGE
+        ports:
+        - containerPort: APP_PORT
+        livenessProbe:
+          httpGet:
+            path: /healthy
+            port: APP_PORT
+          initialDelaySeconds: 3
+          periodSeconds: 3
+
