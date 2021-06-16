@@ -5,7 +5,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.global-static-ip-name: lb-dispatcher-jira
     networking.gke.io/managed-certificates: dispatcher-jira
-    kubernetes.io/ingress.allow-http: "false"
 spec: 
   rules:
   - http: 
