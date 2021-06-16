@@ -5,8 +5,6 @@ metadata:
   labels:
     app: dispatcher-jira
     service: dispatcher-jira
-  annotations:
-    cloud.google.com/backend-config: '{"default": "dispatcher-jira-backendconfig"}'
 spec:
   selector:
     app: dispatcher-jira
