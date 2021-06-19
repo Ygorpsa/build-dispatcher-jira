@@ -9,7 +9,7 @@ env:
   PROJECT_ID: ${{ secrets.GKE_NOC_PROJECT }}
   GKE_REGION: us-central1
   GKE_CLUSTER: noc
-  IMAGE: dispatcher-jira
+  IMAGE: dispatcher-jira-paygo
   APP_PORT: 9578
   MAIN_REPO_NAME: dispatcher-jira
 

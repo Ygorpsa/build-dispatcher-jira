@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: dispatcher-jira
-        image: gcr.io/monitoria-groovetech/dispatcher-jira:TAG_IMAGE
+        image: gcr.io/monitoria-groovetech/dispatcher-jira-paygo:TAG_IMAGE
         ports:
         - containerPort: APP_PORT
         livenessProbe:
