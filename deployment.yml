@@ -4,18 +4,18 @@ metadata:
   name: dispatcher-jira
   labels:
     app: dispatcher-jira
-    version: v1
+    version: v2
 spec:
   replicas: 3
   selector:
     matchLabels:
       app: dispatcher-jira
-      version: v1
+      version: v2
   template:
     metadata:
       labels:
         app: dispatcher-jira
-        version: v1
+        version: v2
     spec:
       containers:
       - name: dispatcher-jira
