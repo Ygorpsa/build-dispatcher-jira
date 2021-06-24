@@ -23,3 +23,10 @@ spec:
           name: dispatcher-jira
           port:
             number: 80 
+     - path: /put-rule
+       pathType: Exact
+       backend:
+         service: 
+          name: dispatcher-jira
+          port:
+            number: 80
