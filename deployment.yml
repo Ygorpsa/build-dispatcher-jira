@@ -20,6 +20,24 @@ spec:
       containers:
       - name: dispatcher-jira
         image: gcr.io/monitoria-groovetech/dispatcher-jira-paygo:TAG_IMAGE
+        env:
+          - name: JIRA_USERNAME
+            valueFrom:
+              secretKeyRef:
+                name: jira-secret
+                key: username
+
+          - name: JIRA_TOKENAPI
+            valueFrom:
+              secretKeyRef:
+                name: jira-secret
+                key: tokenapi
+
+          - name: JIRA_ENDPOINT
+            valueFrom:
+              secretKeyRef:
+                name: jira-secret
+                key: jiraendpoint
         ports:
         - containerPort: APP_PORT
         livenessProbe:
