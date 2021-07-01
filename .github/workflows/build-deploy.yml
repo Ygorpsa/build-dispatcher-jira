@@ -11,7 +11,7 @@ env:
   GKE_CLUSTER: noc
   IMAGE: dispatcher-jira-paygo
   APP_PORT: 9578
-  VERSION: 2.0.6
+  VERSION: 2.0.7
   MAIN_REPO_NAME: dispatcher-jira
   DEP_STRUCTS_REPO_NAME: glib-noc-event-structs
   DEP_STORAGE_REPO_NAME: glib-cloud-storage
