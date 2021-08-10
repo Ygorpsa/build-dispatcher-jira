@@ -31,7 +31,7 @@ spec:
           port:
             number: 80
      - path: /rules
-       pathType: Exact
+       pathType: Prefix
        backend:
          service: 
           name: dispatcher-jira
